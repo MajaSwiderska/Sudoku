@@ -1,4 +1,4 @@
-=# Pink Sudoku Game
+# Pink Sudoku Game
 
 A beautiful, fully-featured Sudoku game built with React, TypeScript, and Tailwind CSS. Features a stunning pink color scheme, custom fonts, and smooth light/dark mode transitions.
 
