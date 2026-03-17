@@ -1,0 +1,20 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --font-size: 16px;
+    --font-family-heading: 'Comfortaa', cursive;
+    --font-family-body: 'Quicksand', sans-serif;
+
+    /* Light theme */
+    --backgroud: #fff5f9;
+    --foregroud: #4a0e2a;
+    --card: #ffffff;
+    --popover:
+
+    /*Specific colors - light theme*/
+
+    /* Drak theme */
+    
+    /*Specific colors - Dark theme*/
+
+}
