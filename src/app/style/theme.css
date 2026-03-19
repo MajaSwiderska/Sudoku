@@ -1,20 +1,164 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --font-size: 16px;
-    --font-family-heading: 'Comfortaa', cursive;
-    --font-family-body: 'Quicksand', sans-serif;
+  --font-size: 16px;
+  --font-family-heading: 'Comfortaa', cursive;
+  --font-family-body: 'Quicksand', sans-serif;
+  
+  /* Pink Light Theme */
+  --background: #fff5f9;
+  --foreground: #4a0e2a;
+  --card: #ffffff;
+  --card-foreground: #4a0e2a;
+  --popover: #ffffff;
+  --popover-foreground: #4a0e2a;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: #fce7f3;
+  --secondary-foreground: #831843;
+  --muted: #fce7f3;
+  --muted-foreground: #9d174d;
+  --accent: #fbcfe8;
+  --accent-foreground: #831843;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #f9a8d4;
+  --input: #f9a8d4;
+  --input-background: #fdf2f8;
+  --switch-background: #f9a8d4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #ec4899;
+  --radius: 0.75rem;
+  
+  /* Sudoku-specific colors */
+  --cell-bg: #ffffff;
+  --cell-hover: #fce7f3;
+  --cell-selected: #fbcfe8;
+  --cell-highlight: #fdf2f8;
+  --cell-invalid: #fee2e2;
+  --cell-filled: #f9a8d4;
+  --cell-number: #ec4899;
+  --cell-number-initial: #be185d;
+  --grid-border: #ec4899;
+  --grid-border-light: #f9a8d4;
+}
 
-    /* Light theme */
-    --backgroud: #fff5f9;
-    --foregroud: #4a0e2a;
-    --card: #ffffff;
-    --popover:
+.dark {
+  /* Pink Dark Theme */
+  --background: #1a0612;
+  --foreground: #fce7f3;
+  --card: #2d0a1e;
+  --card-foreground: #fce7f3;
+  --popover: #2d0a1e;
+  --popover-foreground: #fce7f3;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: #4a1930;
+  --secondary-foreground: #fce7f3;
+  --muted: #4a1930;
+  --muted-foreground: #f9a8d4;
+  --accent: #701a45;
+  --accent-foreground: #fce7f3;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #701a45;
+  --input: #701a45;
+  --ring: #ec4899;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  /* Sudoku-specific dark colors */
+  --cell-bg: #2d0a1e;
+  --cell-hover: #4a1930;
+  --cell-selected: #701a45;
+  --cell-highlight: #3d1426;
+  --cell-invalid: #7f1d1d;
+  --cell-filled: #9d174d;
+  --cell-number: #fda4c7;
+  --cell-number-initial: #ec4899;
+  --grid-border: #ec4899;
+  --grid-border-light: #701a45;
+}
 
-    /*Specific colors - light theme*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
 
-    /* Drak theme */
-    
-    /*Specific colors - Dark theme*/
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
 
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  label {
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
 }
