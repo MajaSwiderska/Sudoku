@@ -22,3 +22,6 @@ A beautiful, fully-featured Sudoku game built with React, TypeScript, and Tailwi
 4. Complete the puzzle following Sudoku rules: each row, column, and 3×3 box must contain numbers 1-9
 
 Built with React 18, TypeScript, Tailwind CSS v4, and Lucide React icons.
+
+## Link
+http://localhost:5176/
